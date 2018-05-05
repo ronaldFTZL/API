@@ -1,0 +1,102 @@
+package com.example.webapi.ws.controller;
+
+import java.awt.PageAttributes.MediaType;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.webapi.ws.model.Conta;
+import com.example.webapi.ws.model.Aluno;
+
+@RestController
+public class ContaController {
+
+	Map<Integer, Conta> contas = new HashMap<>();;
+	Integer proximoId = 1;
+
+	private Conta cadastrar(Conta conta) {
+
+		conta.setId(proximoId);
+
+		proximoId++;
+
+		contas.put(conta.getId(), conta);
+		return conta;
+	}
+
+	private Collection<Conta> buscarTodas() {
+
+		return contas.values();
+	}
+
+	public void excluir(Conta conta) {
+		contas.remove(conta.getId());
+	}
+
+	private Conta buscarPorID(Integer id) {
+
+		return contas.get(id);
+	}
+
+	public Conta alterar(Conta conta) {
+		contas.put(conta.getId(), conta);
+		return conta;
+	}
+
+	// End points
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/test")
+	public Aluno adiciona(@RequestBody Aluno teste) {
+		return teste;
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/contas", consumes = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Conta> cadastrarConta(@RequestBody Conta conta) {
+		Conta contacadastrada = cadastrar(conta);
+		System.out.println("Cadastrou");
+		return new ResponseEntity<>(contacadastrada, HttpStatus.CREATED);
+	}
+
+	@RequestMapping(method = RequestMethod.GET, value = "/contas", produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Collection<Conta>> buscarTodasContas(@RequestBody Conta conta) {
+		Collection<Conta> contasBuscadas = buscarTodas();
+
+		System.out.println("Retornou");
+		return new ResponseEntity<>(contasBuscadas, HttpStatus.OK);
+	}
+
+	@RequestMapping(method = RequestMethod.DELETE, value = "/contas/{id}")
+	public ResponseEntity<Conta> excluirConta(@PathVariable Integer id) {
+
+		Conta contaEncontrada = buscarPorID(id);
+
+		if (contaEncontrada == null) {
+
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+		excluir(contaEncontrada);
+		System.out.println("Excluiu");
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
+	@RequestMapping(method = RequestMethod.PUT, value = "/contas", consumes = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Conta> alterarConta(@RequestBody Conta conta) {
+
+		/*
+		 * Conta contaEncontrada = buscarPorID(conta.getId()); if(contaEncontrada==null)
+		 * { return new ResponseEntity<Conta>(HttpStatus.NOT_FOUND); }
+		 */
+		Conta contaalterada = alterar(conta);
+		System.out.println("Alterou");
+		return new ResponseEntity<>(contaalterada, HttpStatus.OK);
+	}
+
+}

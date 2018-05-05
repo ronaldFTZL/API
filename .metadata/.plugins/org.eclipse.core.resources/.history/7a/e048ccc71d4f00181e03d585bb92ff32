@@ -1,0 +1,21 @@
+package com.example.webapi.ws.model;
+
+public class LancamentoContaCorreteCliente {
+
+	private int numeroRemessa;
+	private String nomeSituacaoRemessa;
+	public int getNumeroRemessa() {
+		return numeroRemessa;
+	}
+	public void setNumeroRemessa(int numeroRemessa) {
+		this.numeroRemessa = numeroRemessa;
+	}
+	public String getNomeSituacaoRemessa() {
+		return nomeSituacaoRemessa;
+	}
+	public void setNomeSituacaoRemessa(String nomeSituacaoRemessa) {
+		this.nomeSituacaoRemessa = nomeSituacaoRemessa;
+	}
+	
+	
+}

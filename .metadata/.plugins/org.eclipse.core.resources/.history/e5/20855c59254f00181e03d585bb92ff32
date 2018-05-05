@@ -1,0 +1,156 @@
+package com.example.webapi.ws.model;
+
+import java.util.Date;
+
+public class TotalControleDeLancamento {
+
+	private int id;
+	private int quantidadeLancamentos;
+
+	private String nomeTipoOperacao;
+
+	private int quantidadeRemessas;
+
+	private long valorLancamentos;
+
+	private Date dataEfetivaLancamento;
+	private Date dataLancamentoContaCorrenteCliente;
+	private String descricaoGrupoPagamento;
+	private int codigoIdentificadorUnico;
+	private String nomeBanco;
+	private int quantidadeLancamentoRemessa;
+	private long numeroRaizCNPJ;
+	private int numeroSufixoCNPJ;
+
+	private float valorLancamentoRemessa;
+	private long dateLancamentoContaCorrenteCliente;
+	private long dateEfetivaLancamento;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNomeTipoOperacao() {
+		return nomeTipoOperacao;
+	}
+
+	public void setNomeTipoOperacao(String nomeTipoOperacao) {
+		this.nomeTipoOperacao = nomeTipoOperacao;
+	}
+
+	public Date getDataEfetivaLancamento() {
+		return dataEfetivaLancamento;
+	}
+
+	public void setDataEfetivaLancamento(Date dataEfetivaLancamento) {
+		this.dataEfetivaLancamento = dataEfetivaLancamento;
+	}
+
+	public Date getDataLancamentoContaCorrenteCliente() {
+		return dataLancamentoContaCorrenteCliente;
+	}
+
+	public void setDataLancamentoContaCorrenteCliente(Date dataLancamentoContaCorrenteCliente) {
+		this.dataLancamentoContaCorrenteCliente = dataLancamentoContaCorrenteCliente;
+	}
+
+	public String getDescricaoGrupoPagamento() {
+		return descricaoGrupoPagamento;
+	}
+
+	public void setDescricaoGrupoPagamento(String descricaoGrupoPagamento) {
+		this.descricaoGrupoPagamento = descricaoGrupoPagamento;
+	}
+
+	public int getCodigoIdentificadorUnico() {
+		return codigoIdentificadorUnico;
+	}
+
+	public void setCodigoIdentificadorUnico(int codigoIdentificadorUnico) {
+		this.codigoIdentificadorUnico = codigoIdentificadorUnico;
+	}
+
+	public String getNomeBanco() {
+		return nomeBanco;
+	}
+
+	public void setNomeBanco(String nomeBanco) {
+		this.nomeBanco = nomeBanco;
+	}
+
+	public int getQuantidadeLancamentoRemessa() {
+		return quantidadeLancamentoRemessa;
+	}
+
+	public void setQuantidadeLancamentoRemessa(int quantidadeLancamentoRemessa) {
+		this.quantidadeLancamentoRemessa = quantidadeLancamentoRemessa;
+	}
+
+	public long getNumeroRaizCNPJ() {
+		return numeroRaizCNPJ;
+	}
+
+	public void setNumeroRaizCNPJ(long numeroRaizCNPJ) {
+		this.numeroRaizCNPJ = numeroRaizCNPJ;
+	}
+
+	public int getNumeroSufixoCNPJ() {
+		return numeroSufixoCNPJ;
+	}
+
+	public void setNumeroSufixoCNPJ(int numeroSufixoCNPJ) {
+		this.numeroSufixoCNPJ = numeroSufixoCNPJ;
+	}
+
+	public float getValorLancamentoRemessa() {
+		return valorLancamentoRemessa;
+	}
+
+	public void setValorLancamentoRemessa(float valorLancamentoRemessa) {
+		this.valorLancamentoRemessa = valorLancamentoRemessa;
+	}
+
+	public long getDateLancamentoContaCorrenteCliente() {
+		return dateLancamentoContaCorrenteCliente;
+	}
+
+	public void setDateLancamentoContaCorrenteCliente(long dateLancamentoContaCorrenteCliente) {
+		this.dateLancamentoContaCorrenteCliente = dateLancamentoContaCorrenteCliente;
+	}
+
+	public long getDateEfetivaLancamento() {
+		return dateEfetivaLancamento;
+	}
+
+	public void setDateEfetivaLancamento(long dateEfetivaLancamento) {
+		this.dateEfetivaLancamento = dateEfetivaLancamento;
+	}
+
+	public int getQuantidadeLancamentos() {
+		return quantidadeLancamentos;
+	}
+
+	public void setQuantidadeLancamentos(int quantidadeLancamentos) {
+		this.quantidadeLancamentos = quantidadeLancamentos;
+	}
+
+	public int getQuantidadeRemessas() {
+		return quantidadeRemessas;
+	}
+
+	public void setQuantidadeRemessas(int quantidadeRemessas) {
+		this.quantidadeRemessas = quantidadeRemessas;
+	}
+
+	public long getValorLancamentos() {
+		return valorLancamentos;
+	}
+
+	public void setValorLancamentos(long valorLancamentos) {
+		this.valorLancamentos = valorLancamentos;
+	}
+}

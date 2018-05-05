@@ -1,0 +1,30 @@
+package com.example.webapi.ws.model;
+
+public class Conta {
+
+	private Integer id;
+	private Long numConta;
+	
+	private TotalControleDeLancamento totalControleDeLancamento;
+		
+	public TotalControleDeLancamento getTotalControleDeLancamento() {
+		return totalControleDeLancamento;
+	}
+	public void setTotalControleDeLancamento(TotalControleDeLancamento totalControleDeLancamento) {
+		this.totalControleDeLancamento = totalControleDeLancamento;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Long getNumConta() {
+		return numConta;
+	}
+	public void setNumConta(Long numConta) {
+		this.numConta = numConta;
+	}
+	
+	
+}

@@ -1,0 +1,10 @@
+package com.example.webapi.ws.controller;
+
+import java.util.ArrayList;
+
+import com.example.webapi.ws.model.Conta;
+
+public class Teste { 
+ ArrayList<Conta> conta =new ArrayList();
+ 
+}

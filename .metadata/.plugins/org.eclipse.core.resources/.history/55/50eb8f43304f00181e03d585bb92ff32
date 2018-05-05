@@ -1,0 +1,30 @@
+package com.example.webapi.ws.model;
+
+import java.util.ArrayList;
+
+public class Extrato {
+
+	private TotalControleDeLancamento controlelancamento;
+	ArrayList<ControleLancamento> lista= new ArrayList();
+	private int Id;
+	
+	public int getId() {
+		return Id;
+	}
+	public void setId(int id) {
+		this.Id = id;
+	}
+	public TotalControleDeLancamento getControlelancamento() {
+		return controlelancamento;
+	}
+	public void setControlelancamento(TotalControleDeLancamento controlelancamento) {
+		this.controlelancamento = controlelancamento;
+	}
+	public ArrayList<ControleLancamento> getLista() {
+		return lista;
+	}
+	public void setLista(ArrayList<ControleLancamento> lista) {
+		this.lista = lista;
+	}
+
+}

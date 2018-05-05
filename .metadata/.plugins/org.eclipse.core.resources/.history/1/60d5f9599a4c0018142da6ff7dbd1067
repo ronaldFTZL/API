@@ -1,0 +1,14 @@
+package com.example.webapi.ws.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ContaController {
+
+	@RequestMapping(method=RequestMethod.GET, value="/contas")
+	public static void buscaConta() {
+	System.out.println("Chamou");
+}
+}

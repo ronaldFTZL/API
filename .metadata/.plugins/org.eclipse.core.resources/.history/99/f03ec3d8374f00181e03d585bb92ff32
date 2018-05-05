@@ -1,0 +1,23 @@
+package com.example.webapi.ws.model;
+
+import java.util.Date;
+
+public class ControleLancamento {
+
+	private LancamentoContaCorreteCliente lancamentoContaCorrenteCliente;
+	
+	private Date dataEfetivaLancamento;
+	private Date dataLancamentoContaCorrenteCliente;
+	private long numeroEvento;
+	private String descricaoGrupoPagamento;
+	private int codigoIdentificadorUnico;
+	private String nomeBanco;
+	private int quantidadeLancamentoRemessa;
+	private long numeroRaizCNPJ;
+	private int numeroSufixoCNPJ;
+
+	private float valorLancamentoRemessa;
+	private long dateLancamentoContaCorrenteCliente;
+	private long dateEfetivaLancamento;
+
+}

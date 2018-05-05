@@ -1,0 +1,80 @@
+package com.example.webapi.ws.model;
+
+import java.util.Date;
+
+public class TotalControleDeLancamento {
+
+	private int id;
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	private int quantidadeLancamentos;
+
+	private String nomeTipoOperacao;
+
+	private int quantidadeRemessas;
+
+	private long valorLancamentos;
+
+	private lancamentoContaCorreteCliente lancamentoContaCorrenteCliente;
+
+	private dadosDomicilioBancario dadosDomicilioBancario;
+
+	private Date dataEfetivaLancamento;
+	private Date dataLancamentoContaCorrenteCliente;
+	private String descricaoGrupoPagamento;
+	private int codigoIdentificadorUnico;
+	private String nomeBanco;
+	private int quantidadeLancamentoRemessa;
+	private long numeroRaizCNPJ;
+	private int numeroSufixoCNPJ;
+
+	private float valorLancamentoRemessa;
+	private long dateLancamentoContaCorrenteCliente;
+	private long dateEfetivaLancamento;
+
+	public dadosDomicilioBancario getDadosDomicilioBancario() {
+		return dadosDomicilioBancario;
+	}
+
+	public void setDadosDomicilioBancario(dadosDomicilioBancario dadosDomicilioBancario) {
+		this.dadosDomicilioBancario = dadosDomicilioBancario;
+	}
+
+	public lancamentoContaCorreteCliente getLancamentoContaCorrenteCliente() {
+		return lancamentoContaCorrenteCliente;
+	}
+
+	public void setLancamentoContaCorrenteCliente(lancamentoContaCorreteCliente lancamentoContaCorrenteCliente) {
+		this.lancamentoContaCorrenteCliente = lancamentoContaCorrenteCliente;
+	}
+
+	public int getQuantidadeLancamentos() {
+		return quantidadeLancamentos;
+	}
+
+	public void setQuantidadeLancamentos(int quantidadeLancamentos) {
+		this.quantidadeLancamentos = quantidadeLancamentos;
+	}
+
+	public int getQuantidadeRemessas() {
+		return quantidadeRemessas;
+	}
+
+	public void setQuantidadeRemessas(int quantidadeRemessas) {
+		this.quantidadeRemessas = quantidadeRemessas;
+	}
+
+	public long getValorLancamentos() {
+		return valorLancamentos;
+	}
+
+	public void setValorLancamentos(long valorLancamentos) {
+		this.valorLancamentos = valorLancamentos;
+	}
+}

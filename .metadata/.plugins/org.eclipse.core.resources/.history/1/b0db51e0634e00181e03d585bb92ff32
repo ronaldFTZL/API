@@ -1,0 +1,30 @@
+package com.example.webapi.ws.model;
+
+import javax.validation.constraints.NotNull;
+
+public class Endereco {
+
+	private String rua;
+	
+	@NotNull
+	private String cep;
+
+	public String getRua() {
+		return rua;
+	}
+
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+	
+	
+	
+}

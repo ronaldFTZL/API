@@ -1,0 +1,58 @@
+package com.example.webapi.ws.controller;
+
+import java.awt.PageAttributes.MediaType;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.webapi.ws.model.Conta;
+
+@RestController
+public class ContaController {
+
+	Map<Integer, Conta> contas;
+	Integer proximoId = 1;
+
+	private Conta cadastrar(Conta conta) {
+
+		if (conta == null) {
+			contas = new HashMap<>();
+
+		}
+		conta.setId(proximoId);
+
+		proximoId++;
+
+		contas.put(conta.getId(), conta);
+		return conta;
+	}
+
+	private Collection<Conta> buscarTodas() {
+
+		return contas.values();
+	}
+
+	// End points
+	@RequestMapping(method = RequestMethod.POST, value = "/contas", consumes = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Conta> cadastrarConta(@RequestBody Conta conta) {
+		Conta contacadastrada = cadastrar(conta);
+		System.out.println("Chamou");
+		return new ResponseEntity<Conta>(contacadastrada, HttpStatus.CREATED);
+	}
+
+	// End points
+	@RequestMapping(method = RequestMethod.GET, value = "/contas", consumes = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Conta> buscarTodasContas(@RequestBody Conta conta) {
+		Collection<Collection<Conta>> contasBuscadas = new buscarTodas();
+
+		System.out.println("Chamou");
+		return new ResponseEntity<>(contasBuscadas, HttpStatus.CREATED);
+	}
+}

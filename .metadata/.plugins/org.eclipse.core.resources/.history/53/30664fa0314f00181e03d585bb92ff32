@@ -1,0 +1,29 @@
+package com.example.webapi.ws.model;
+
+public class DadosDomicilioBancario {
+	private int codigoBanco;
+	private int numAgencia;
+	private long numContaCorrente;
+	
+	
+	public int getCodigoBanco() {
+		return codigoBanco;
+	}
+	public void setCodigoBanco(int codigoBanco) {
+		this.codigoBanco = codigoBanco;
+	}
+	public int getNumAgencia() {
+		return numAgencia;
+	}
+	public void setNumAgencia(int numAgencia) {
+		this.numAgencia = numAgencia;
+	}
+	public long getNumContaCorrente() {
+		return numContaCorrente;
+	}
+	public void setNumContaCorrente(long numContaCorrente) {
+		this.numContaCorrente = numContaCorrente;
+	}
+	
+		
+}

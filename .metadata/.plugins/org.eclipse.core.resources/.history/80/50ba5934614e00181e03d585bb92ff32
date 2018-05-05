@@ -1,0 +1,23 @@
+package com.example.webapi.ws.model;
+
+public class Conta {
+
+	private Integer id;
+	private Long numConta;
+	
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Long getNumConta() {
+		return numConta;
+	}
+	public void setNumConta(Long numConta) {
+		this.numConta = numConta;
+	}
+	
+	
+}

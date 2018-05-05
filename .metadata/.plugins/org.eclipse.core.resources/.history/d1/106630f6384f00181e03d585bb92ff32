@@ -1,0 +1,47 @@
+package com.example.webapi.ws.model;
+
+import java.util.Date;
+
+public class TotalControleDeLancamento {
+
+	private int id;
+	private int quantidadeLancamentos;
+
+	private int quantidadeRemessas;
+
+	private long valorLancamentos;
+
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
+	public int getQuantidadeLancamentos() {
+		return quantidadeLancamentos;
+	}
+
+	public void setQuantidadeLancamentos(int quantidadeLancamentos) {
+		this.quantidadeLancamentos = quantidadeLancamentos;
+	}
+
+	public int getQuantidadeRemessas() {
+		return quantidadeRemessas;
+	}
+
+	public void setQuantidadeRemessas(int quantidadeRemessas) {
+		this.quantidadeRemessas = quantidadeRemessas;
+	}
+
+	public long getValorLancamentos() {
+		return valorLancamentos;
+	}
+
+	public void setValorLancamentos(long valorLancamentos) {
+		this.valorLancamentos = valorLancamentos;
+	}
+}

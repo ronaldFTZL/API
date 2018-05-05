@@ -1,0 +1,5 @@
+package com.example.webapi.ws.model;
+
+public class ControleLancamento {
+
+}
